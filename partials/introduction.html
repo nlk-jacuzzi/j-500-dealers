@@ -1,0 +1,51 @@
+<div class="row full-height">
+	<div class="col-xs-16 col-sm-10 col-md-11 full-height">
+		<div class="row height-70 introduction-hero">
+			<span class="sr-only">J-500 Series</span>
+			<a class="play-video" ng-click="toggleVideo()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span>Play Video</a>
+		</div>
+		<div class="row height-30 dark-grey">
+			<div class="col-xs-8 full-height padt-x" ng-repeat="tub in tubs">
+				<span class="sr-only">{{tub.name}}</span>
+				<div class="row full-height">
+					<div class="col-xs-16 col-sm-8 col-md-8 full-height">
+						<img ng-src="{{tub.image}}" class="img-responsive" />
+					</div>
+					<div class="col-xs-16 col-sm-8 col-md-8 full-height">
+						<div class="padt-x pad-sm-20">
+							<h3 class="text-uppercase">{{tub.name}}</h3>
+							<ul class="list-unstyled">
+								<li><strong class="text-uppercase">Seating:</strong> {{tub.seating}}</li>
+								<li><strong class="text-uppercase">Lounge:</strong> {{tub.lounge}}</li>
+								<li><strong class="text-uppercase">Total Jets:</strong> {{tub.jets}}</li>
+							</ult>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-16 col-sm-6 col-md-5 full-height">
+		<div class="row height-100">
+			<div class="col-xs-16 col-sm-16 col-md-16 height-70 light-grey text-row">
+				<h1 class="text-uppercase" ng-bind-html="heading"></h1>
+				<div ng-bind-html="desc"></div>
+			</div>
+			<div class="col-xs-16 col-sm-16 col-md-16 height-30 introduction-next">
+				<a href="Design" class="next">Next<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+			</div>
+		</div>
+		<!--
+		<div class="row height-70 light-grey text-row">
+			<div class="col-xs-16">
+				<h1 class="text-uppercase"><span>Revolutionary Design,</span> Legendary Performance</h1>
+				<p>With the market cornered in advanced hydromassage, the J-500&trade; Collection combines innovative technology and ground-breaking hot tub design. The new series features a unique curve design and outer architectural lighting never seen before. They also bring an exterior skirt design inspired from woven textiles that steal the spotlight. Regardless of which model you choose, the J-500&trade; Collection does more than enhance your wellbeing; it makes a statement.</p>
+			</div>
+		</div>
+		<div class="row height-30 introduction-next">
+			<a href="Design" class="next">Next<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+		</div> -->
+	</div>
+</div>
+
+<span ng-if="showVideo" ng-include="videotemplate"></span>

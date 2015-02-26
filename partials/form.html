@@ -1,0 +1,44 @@
+<div class="row">
+
+	<form ng-submit="submit(orderForm)" name="orderForm" method="post" role="form" class="full-height" >
+
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.firstName.$invalid && submitted }">
+				<label for="firstName">First Name *</label>
+				<input type="text" class="form-control" id="firstName" name="firstName" placeholder="" ng-model="formData.firstName" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.lastName.$invalid && submitted }">
+				<label for="lastName">Last Name *</label>
+				<input type="text" class="form-control" id="lastName" name="lastName" placeholder="" ng-model="formData.lastName" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.phone.$invalid && submitted }">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" name="phone" placeholder="" ng-model="formData.phone">
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.email.$invalid && submitted }">
+				<label for="email">Email *</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="" ng-model="formData.email" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.zipCode.$invalid && submitted }">
+				<label for="zipCode">Zip Code *</label>
+				<input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="" ng-model="formData.zipCode" required>
+			</div>
+		</div>
+		<div class="col-xs-16">
+			<p>* Required fields. {{resultMessage}}</p>
+		</div>
+		<div class="col-xs-16">
+			<button type="submit" class="btn btn-primary btn-lg text-uppercase" ng-disabled="submitButtonDisabled">Submit Info</button>
+		</div>
+
+	</form>
+
+</div>

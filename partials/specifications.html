@@ -1,0 +1,26 @@
+<div class="row full-height">
+	<div class="col-xs-16 col-sm-11 col-md-11 full-height">
+		<div class="row full-height" ng-hide="showForm">
+			<div ng-bind-html="desc"></div>
+		</div>
+	</div>
+	<div class="col-xs-16 col-sm-5 col-md-5 full-height">
+		<div class="row height-85 light-light-grey">
+			<div class="col-xs-16">
+				<div ng-repeat="tub in tubs" class="container-variable height-50 select-tub-container" ng-class="isCurrentTub($index) ? 'active' : !selectedTub.id ? '' : 'faded'">
+					<div class="row">
+						<div class="col-xs-16">
+							<h3 class="text-center text-uppercase">{{tub.name}}</h3>
+						</div>
+						<div class="col-xs-16">
+							<img ng-src="{{tub.image}}" class="img-responsive" ng-click="setCurrentTub($index);" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row height-15 order-your-model black">
+			<a class="btn btn-default order-now" href="Order">Get the J-500™</a>
+		</div>
+	</div>
+</div>

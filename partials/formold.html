@@ -1,0 +1,83 @@
+<div class="row">
+
+	<form ng-submit="submit(orderForm)" name="orderForm" method="post" role="form" class="full-height" >
+
+		<div class="col-xs-16 please-select-model" ng-hide="selectedTub.name">
+			<div>
+				<h3 class="hidden-xs">Please select a tub model from the right to begin your order.<span class="glyphicon glyphicon-arrow-right"></span></h3>
+				<h3 class="visible-xs">Please select a tub model from the top to begin your order.<span class="glyphicon glyphicon-arrow-up"></span></h3>
+			</div>
+		</div>
+	
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.firstName.$invalid && submitted }">
+				<label for="firstName">First Name *</label>
+				<input type="text" class="form-control" id="firstName" name="firstName" placeholder="" ng-model="formData.firstName" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.lastName.$invalid && submitted }">
+				<label for="lastName">Last Name *</label>
+				<input type="text" class="form-control" id="lastName" name="lastName" placeholder="" ng-model="formData.lastName" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.storeName.$invalid && submitted }">
+				<label for="storeName">Store Name *</label>
+				<input type="text" class="form-control" id="storeName" name="storeName" placeholder="" ng-model="formData.storeName" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.email.$invalid && submitted }">
+				<label for="email">Email *</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="" ng-model="formData.email" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.phone.$invalid && submitted }">
+				<label for="phone">Phone</label>
+				<input type="tel" class="form-control" id="phone" name="phone" placeholder="" ng-model="formData.phone">
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.zipCode.$invalid && submitted }">
+				<label for="zipCode">Zip Code *</label>
+				<input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="" ng-model="formData.zipCode" required>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.skirtColor.$invalid && submitted }">
+				<label for="skirtColor">Curvalux&trade; Skirt Color</label>
+				<select ng-options="skirtColor.name for skirtColor in skirtColors" class="form-control" id="skirtColor" name="skirtColor" ng-model="formData.skirtColor">
+					<option value="">Select</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-sm-16 col-sm-8 col-md-8">
+			<div class="form-group" ng-class="{ 'has-error': orderForm.shellColor.$invalid && submitted }">
+				<label for="shellColor">Acrylic Shell Color</label>
+				<select ng-options="shellColor.name for shellColor in shellColors" class="form-control" id="shellColor" name="shellColor" ng-model="formData.shellColor">
+					<option value="">Select</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-16">
+			<div class="form-group">
+				<label for="orderSummary">ORDER SUMMARY</label>
+				<ul class="list-unstyled">
+					<li><strong>J-500&trade; Model:</strong> {{selectedTub.name ? selectedTub.name + '&trade;' : 'Please select a J-500&trade; model to the right' }}</li>
+					<li><strong>Curvalux&trade; Skirt Color:</strong> {{formData.skirtColor.name ? formData.skirtColor.name : 'Please select a skirt color'}}</li>
+					<li><strong>Acrylic Shell Color:</strong> {{formData.shellColor.name ? formData.shellColor.name : 'Please select a shell color'}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xs-16">
+			<p>* Required fields. {{resultMessage}}</p>
+		</div>
+		<div class="col-xs-16">
+			<button type="submit" class="btn btn-primary btn-lg text-uppercase" ng-disabled="submitButtonDisabled">Order</button>
+		</div>
+
+	</form>
+
+</div>

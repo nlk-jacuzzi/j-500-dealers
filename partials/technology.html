@@ -1,0 +1,33 @@
+<div class="row full-height">
+	<div class="col-xs-16 col-sm-11 col-md-11 full-height">
+		<div class="row height-30 height-sm-40 light-grey text-row">
+			<div class="col-xs-16">
+				<h1 class="text-uppercase" ng-bind-html="heading"></h1>
+				<div ng-bind-html="desc"></div>
+			</div>
+		</div>
+		<div class="row height-70 height-sm-60 dark-grey technology-hero">
+			<div id="sliderwrapper">
+    			<ul id="experimental1" slideit="pictures"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-16 col-sm-5 col-md-5 full-height">
+		<div class="row height-70 light-grey technology-learn learn-more-container">
+			<div ng-hide="showOverlay" class="container-fluid learn-more-button">
+				<div class="col-xs-16">
+					<a ng-click="showOverlay = !showOverlay" class="learn-more"><span class="" aria-hidden="true">+</span>Learn More</a>
+				</div>
+			</div>
+			<div ng-show="showOverlay" class="container-fluid full-height learn-more-overlay">
+				<div class="col-xs-16">
+					<a ng-click="showOverlay = !showOverlay" class="close-learn-more"><span class="" aria-hidden="true">x</span>Close</a>
+					<div ng-bind-html="learnmore"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row height-30 dark-grey technology-next">
+			<a href="Specifications" class="next">Next<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+		</div>
+	</div>
+</div>
