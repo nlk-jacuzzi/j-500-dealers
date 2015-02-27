@@ -9,7 +9,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> ng-app="myApp">
 <head>
-<base href="/hot-tubs/j-500/">	
+<base href="/j-500/">	
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
