@@ -59,7 +59,7 @@
 					<li><a href="/hot-tubs/dealer-locator/">Locate a Dealer</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a class="btn btn-primary navbar-btn" role="button" href="Order">Be the first to own the J-500&trade;</a></li>
+					<li><a class="btn btn-primary navbar-btn" role="button" href="Order">GET THE BROCHURE</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
